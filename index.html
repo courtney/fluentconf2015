@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/forwardjs.css">
-
+		<link rel="stylesheet" href="css/spin.css">
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -46,54 +46,123 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Algorithms for Animation</h1>
-					<h3>Simple formulas to activate your UI</h3>
-					
-				</section>
-				<section>
-					<img src="img/c5_16_9.png" class="fjs"/>
-					<small><a href="http://www.carbonfive.com">Courtney Hemphill</a> <br/> 						
-						<a href="mailto: courtney@carbonfive.com">courtney@carbonfive.com</a></small>
-						<p><a href="http://twitter.com/chemphill">@chemphill</a><br/>
-						#fwdjs</p></small>
-				</section>
-				<section data-state="summary">
-					<ul id="summaryMenu">
-						<li>Motion perception</li>
-						<li>Animations in interface design</li>						
-						<li>Formulas as foundation of animation</li>
-						<li>Frameworks</li>						
-					</ul>					
-				</section>
-				<section>
-					<h2>Design<span class="big" id="bigV">V</span>Dev</h2>		
-					
-				</section>
-				<section>	
-					<h2>Movement creates life</h2>					
-					<a href="http://www.youtube.com/embed/UY40DHs9vc4?start=35&end=55" target="_blank"><img src="img/Gertie.jpg" class="fjs"/></a>
-					<div class="attribution">Gertie the Dinosaur (Winsor McCay, 1914)<br/>https://www.youtube.com/watch?v=UY40DHs9vc4</div>
-					
-				</section>	
-				<section>
-					<img src="img/tweening.gif" class="fjs"/>
-					
-				</section>					
-				<section data-background="img/brain.jpg">
-					<h2 style="color: #fff; text-shadow: 2px 3px 3px #666;">Animations are cognitive aids</h2>									
 
-					
+				<section class="intro" id="fluentconf">			
+					<div class="intro-content">
+						<h1>Algorithms for Animation</h1>
+						<h3>Simple formulas to activate your UI</h3>											
+					</div>
+					<div class="c5-contact">
+						<img src="img/c5_16_9.png" id="c5-logo"/>
+						<small>
+							<a href="http://www.carbonfive.com">Courtney Hemphill</a>				
+							<a href="mailto: courtney@carbonfive.com">courtney@carbonfive.com</a>
+							<a href="http://twitter.com/chemphill">@chemphill</a>
+							#fluentconf
+						</small>
+					</div>		
+					<span class="spin">
+						<div class="large circle one"></div>
+						<div class="large circle two"></div>
+						<div class="large circle three"></div>
+						<div class="large circle four"></div>
+						<div class="large circle five"></div>
+						<div class="large circle six"></div>
+						<div class="large circle seven"></div>
+						<div class="large circle eight"></div>						
+					</span>					
+				</section>				
+
+				<section data-state="summary" class="summarySlide">
+					<div class="circle large one bullet-1" id="bullet-1"><span>Motion perception</span></div>					
+					<div class="circle large two" id="bullet-2"><span>Animations in Interface Design</span></div>					
+					<div class="circle large three" id="bullet-3"><span>Formulas as Foundations</span></div>					
+					<div class="circle large four" id="bullet-4"><span>Frameworks</span></div>	
+					<aside class="notes">
+						We're going to get a little context first about motion and design and why it matters and then get into the nitty gritty details. Finally I'll try to talk a bit about the tools and their use in creating animation. 
+					</aside>								
 				</section>
+
+				<section data-state="design-dev">
+					<h2 style="color: #fff; font-size: 4em; text-indent: -2em;">Design<span class="big" id="bigV">V</span></h2>
+					
+					<h2 style="color: #fff; font-size: 4em; text-indent: 4em;"> Dev</h2>							
+					<aside class="notes">
+						The purpose of this talk is two fold. 
+						<br/>The first objective is to outline the basic fundamental of animation and how to put it into practice.
+						<p>The meta purpose of this talk to to attempt to bridge the gap between developers and designers.</p> 
+						<p>How many of you consider yourselves a designer? Developer? Hybrid?</p>
+						<p>Designing animations for software has always been a bit decoupled from the implementation.<br/>
+						translating that onto web or mobile is always a bit tricky.</p> 
+						<p>Developers can also benefit by understanding some of the basic principles behind animation design so they can add in some interesting elements to their interface designs</p> 						
+					</aside>			
+				</section>
+
+				<section data-state="gertie">	
+					<h2>Movement creates life</h2>		
+					<video width="960" height="540" controls="controls">
+						<source src="img/gertie.mp4" type="video/mp4">
+					</video>			
+					<!-- <a href="http://www.youtube.com/embed/UY40DHs9vc4?start=35&end=55" target="_blank"><img src="img/Gertie.jpg" class="fjs"/></a> -->
+					<div class="attribution">Gertie the Dinosaur (Winsor McCay, 1914)<br/>https://www.youtube.com/watch?v=UY40DHs9vc4</div>				
+					<aside class="notes">
+						Animations are fun. Take a simple static image with very little personality...
+						Windsor McCay
+					</aside>
+				</section>	
+
+				<section>
+					<img src="img/tweening.gif" class="fjs"/>					
+					<aside class="notes">
+						<p>Windsor McCay working at disney, came up with a way to create cartoon animations</p>
+
+						<p>Traditional disney animation consisted of the best designers creating a few key animation drawings and then a "inbetweener" would draw in the scenes between. This is where keyframe and tween came to be. </p>
+
+						<p>We use software to be the "inbetweener".</p>
+						
+						<p>So instead of a human determining tbe direction and speed that this figure flips, we've can use math to actually create very organic and natural animations from one state to the next.</p>
+					</aside>	
+				</section>					
+
+				<section data-background="img/brain.jpg">
+					<h2 style="color: #fff; text-shadow: 2px 3px 3px #666;">Animations are cognitive aids</h2>														
+					<aside class="notes">
+						<p>Motion is something we as humans inately respond to. But we are also very sensitive to it. So it needs to feel right. </p>
+						
+						Motion is a new and powerful design material that can be used to great affect in communicating with your users. 
+						There are already more and more great resources available to help find best practices in animation in UI
+
+						<ul> 
+							<li>Google Material Design</li>
+							<li>iOS 7 Design Resources</li>
+							<li>Metro UI CSS</li>
+						</ul>
+						
+					</aside>
+				</section>
+
 				<section>
 					<div style="background: url('img/chair.jpg') no-repeat 50% 100%; height: 570px; width: 900px;">
 						<h2>Affordance, percieved affordance & signifiers</h2>
-					</div>
-							
+					</div>		
+					<aside class="notes">
+						<p>What does it mean to "feel" right?</p>
+						<p>It is very much based in reality and in our interaction with everyday things
+						Don Noman in "The design of everyday things" talks about affordance</p>
+						
+						<p>Things have understood physical properties which we can intuit to mean certain things. this is affordance.</p>
+						<p>In much the same way, user interfaces can naturally lead people to take the correct steps to accomplish their goals.. this is a signifier or perceived affordance: The concept of affordance derives from cognitive psychology and refers to particular characteristics of an object that guide the viewer.
+						</p>					
+						<p>"a desirable property of a user interface — software which naturally leads people to take the correct steps to accomplish their goals."</p>																		
+					</aside>					
 				</section>				
+
 				<section data-background="img/ferrari.jpg">
-					<h2 style="color: #ddd;">Motion detection</h2>										
-								
+					<h2 style="color: #ddd;">Motion detection</h2>																		
+					<aside class="notes">
+						Humans have crap perception of color in their peripheral vision but are great at sensing movement. 
+						Animated transitions between screens convey logical relationships and create an understood "map" of an interface from how things enter and exit a screen.											
+					</aside>			
 				</section>
 				<section>
 					<iframe src="grid-demo.html" width="1020" height="600" frameborder="0"></iframe>
@@ -107,55 +176,56 @@
 						document.getElementById('motion-btn-demo').addEventListener('click', function(){this.className = 'animated shake'; this.innerHTML = 'Wrong';});;
 						document.getElementById('color-btn-demo').addEventListener('click', function(){this.className = 'wrong'; this.innerHTML = 'Wrong';});;
 					</script>
-				</section>
-				
-				
+				</section>							
 				
 				<section>
 					<h2>Navigation</h2>
 				</section>
+
 				<section>
 					<img src="img/ScrollingNoAnimation.gif" class="fjs"/>
 					<div class="attribution">Adrian Zumbrunnen <br/> http://www.smashingmagazine.com/2013/10/23/smart-transitions-in-user-experience-design/</div>
 				</section>
+
 				<section>
 					<img src="img/ScrollingAnimated.gif" class="fjs"/>
 					<div class="attribution">Adrian Zumbrunnen <br/> http://www.smashingmagazine.com/2013/10/23/smart-transitions-in-user-experience-design/</div>
-				</section>					
-			
+				</section>								
 			
 				<section>
 					<h2>Progressive Disclosure</h2>
 				</section>
+
 				<section>
 					<img src="img/progressive_disclosure.gif" class="fjs"/>
 					<div class="attribution">Colin Garven <br/> https://dribbble.com/ColinGarven</div>
-				</section>					
-			
+				</section>								
 			
 				<section>
 					<h2>Context</h2>
 				</section>
+		
 				<section>
 					<img src="img/Twitter.gif" class="fjs"/>
 				</section>						
-		
-												
+														
 				<section>
-					<h2>How do you communicate animation ideas?</h2>									
-					
+					<h2>How do you communicate animation ideas?</h2>													
 				</section>	
+
 				<section>
 					<h2>Math</h2>
-					<p>
-						<img src="img/math_heart.jpg" class="fjs"/>
-					</p>
+					<p><img src="img/math_heart.jpg" class="fjs"/></p>					
+					<aside class="notes">												
+						<p>Animation has its roots in some very easy math functions.</p>
+						<p>Coming up with an easy way to play around with animations can actually be a bit tricky without pulling out Flinto or Adobe Quartz or some bloated framework. </p>						
+						<p>I am assuradly not good at math. I can get by, about as well as I can get by in paris with my french. which is to say, i can communicate, i can have some fun, and I can get what I want to get across across. I feel about the same with math and happily have found ways to have fun with it in my coding.</p>
+					</aside>
+				</section>	
 
-					
-				</section>					
-				<section>
+				<section data-state="basic-one">
 					<h2>Moving pixels</h2>
-<pre>
+					<pre>
 var ball = document.getElementById('ball');					
 var start = 0;
 
@@ -163,52 +233,44 @@ var basicAnimation = function (e) {
 	<em>start += 12;</em>	     
 	<em>basic.style.left = start + "px";</em>
 	if (Math.abs(start) <= 800) { requestAnimationFrame(basicAnimation); }	
-}
-	
-</pre>
+}						
+					</pre>
+					<div class="basic-one-slide-background"><div id="basic-one"></div></div>						
+				</section>											
 
-		<div id="basic-one"></div>		
-		<span id="start-basic" style="color: gray;">></span>
+				<section>
+					<h2>The basics of animation: interpolation</h2>
+					<!-- <p>Start, Change, Time, Duration</p> -->
+					<pre>valueAtTime = (end - start) * time / duration + start</pre>					
+					<aside class="notes">
+						<p>One simple formula describes all animation. <p>
+						
+						<p>Once you understand this, you can manipulate your animation without limit.</p>
+						
+						<p>It is all based on time. You need to know where you are going to start, where you want to go (change), where you are currently, and what the total duration should be for the animation</p>
+					</aside>
+				</section>
 
-	 			<script>						
-					
-			var basic = document.getElementById('basic-one');
+				<section>
+					<h2>Breaking it down to [0-1]</h2>		
+					<pre>valueAtTime = (end - start) * time / duration + start</pre>	
+					<p>change = end - start</p>			
+					<p>percent complete = time/duration</p>					
+					<aside class="notes">
+						<p>when making some kind of animation, we know the starting and ending positions, and want to transition between these. All of these can be converted to interpolation from 0 to 1.</p>
 
-			var currentPos = 0;
-			var startBasic = function (e) {
+						- thinking about things in terms of percent complete
+						<p>you are trying to map everything into a point of reference between 0 and 1</p>
+						<p>multiply any value between 0 and 1 with another value between 0 and 1, and the result is guaranteed to be between 0 and 1.</p>
+						this will then work for everything - you will have your different parameters like position, color, shape, etc but you can map them to a value between 0 to 1
+						
+						<p>So Interpolation allows you to start talking more generally and easily porting over whatever you need to put motion to into a very easy range of reference.</p>											
+					</aside>
+				</section>		
 
-			    currentPos += 12;
-		      
-			    basic.style.left = currentPos + "px";
-			    basic.innerHTML = currentPos;
-			    
-			    if (Math.abs(currentPos) <= 800) { requestAnimationFrame(startBasic); }				    
-
-			}
-									
-			document.getElementById('start-basic').addEventListener('click', startBasic);
-		</script>
-
-
-			
-		</section>											
-		<section>
-			<h2>The basics of animation: interpolation</h2>
-			<!-- <p>Start, Change, Time, Duration</p> -->
-			<pre>valueAtTime = (end - start) * time / duration + start</pre>
-			
-		</section>
-		<section>
-			<h2>Breaking it down to [0-1]</h2>		
-			<pre>valueAtTime = (end - start) * time / duration + start</pre>	
-			<p>change = end - start</p>			
-			<p>percent complete = time/duration</p>
-			
-		</section>		
-		<section>
-			<h2>Timing</h2>
-			<pre>
-
+				<section data-state="basic-two">
+					<h2>Timing</h2>
+					<pre>
 var time, startTime;		
 
 var start = function () {
@@ -220,277 +282,156 @@ var run = function () {
 	time = new Date().getTime() - startTime;
 	<em>div.style.left = 900 * time / 1000 + "px";</em>
 	if(value < 1) requestAnimationFrame(run);
-}
-	
-</pre>
+}			
+				</pre>			
+				<div class="basic-one-slide-background"><div id="basic-two"></div></div>
+				<aside class="notes">
+					<p>Now we have a consistent number to work with. All animations will fall in a range from [0-1]. The percentage of completion… </p>
 
-		<div id="basic2" class="pills"></div>		
-		<span id="start-basic2" style="color: gray;">></span>
+					<p>What a property value is at any given time isn't nearly as important as how that property changed from its initial value to the final value over the lifetime of the animation. </p>
+				</aside>
+			</section>							
+		
+			<section data-state="basic-three">
+				<img src="img/percentage.png" class="fjs" style="width: 30%"/>
+				<pre>
+//valueAtTime = (end - start) * time / duration + start
+<em>div.style.left = 900-0 * time / 1000 + 0 + "px";</em>			
+				</pre>			 	
+				<div class="basic-one-slide-background"><div id="basic-three"></div></div>				
+				<aside class="notes">
+					Consistent, unvarying progress from beginning to end. Too mathmatetical... need something with some variety
+				</aside>
+			</section>	
 
-		<script>	
-			var time, startTime;					
-			var basic2 = document.getElementById('basic2');					
+
+			<section>
+				<p>
+					<blockquote>"Using a term like nonlinear science is like referring to the bulk of zoology as the study of non-elephant animals."</blockquote>
+				</p>
+				- Stanislaw Ulam
+				<aside class="notes">
+					<p>The vast majority of mathematical equations and natural phenomena are nonlinear, with linearity being the exceptional, but important, case.</p>
+					nothing in our world actually moves like that<br/>
+					- nothing in this world has perfectly maintained speed except in vacuums<br/>
+					- we don’t live in vacuums, we live with friction and barriers and drag<br/>
+					- we accelerate and decelerate at differing rates<br/>
+					- we experience yaw, torque, etc<br/>			
+				</aside>
+			</section>	
+
+
+			<section>
+				<h2>Natural movement</h2>	
+				<p>Torque, drag, spin, friction</p>				
+			</section>
 			
-			var startBasic2 = function () {
-				startTime = new Date().getTime();
-				runBasic2();
-			}
+			<section>
+				<h2>Easing functions</h2>	
+				<img src="img/easeInCubic.png" class="fjs"/>
+				<aside class="notes">
+					Same beginning and end but with variation in the speed of execution. Start slow and move more quickly.
+				</aside>
+			</section>
 			
-
-			var runBasic2 = function (e) {							
-				time = new Date().getTime() - startTime;
-				value = time / 1000;
-				basic2.innerHTML = value;
-				basic2.style.left = 900 * value + "px";
-			    
-				if(value < 1) requestAnimationFrame(runBasic2);
-
-			}
-									
-			document.getElementById('start-basic2').addEventListener('click', startBasic2);
-		</script>
+			<section>
+				<h2>Easing</h2>	
+		<pre>
+			valueAtTime = (end - start) * easingfunction([0-1]) + start		
+		</pre>
+				<p>Change in property times (some float) plus beginning value.</p>
+				<aside class="notes">
+					Easing functions define the rate at which your property changes. All that matters is what percentage of the final property value has been reached at any given point during the animation's lifetime.
+				</aside>
+			</section>
 
 
-		</section>	
-						
-		
-	<section>
-			<img src="img/percentage.png" class="fjs" style="width: 30%"/>
-<pre>
-	//valueAtTime = (end - start) * time / duration + start
-	<em>div.style.left = 900-0 * time / 1000 + 0 + "px";</em>
-	
-</pre>
-
-	 	<div id="basic3" class="pills"></div>		
-		<span id="start-basic3" style="color: gray;">></span>
-
-		<script>	
-			var time, startTime;					
-			var basic3 = document.getElementById('basic3');					
-			
-			var startBasic3 = function () {
-				startTime = new Date().getTime();
-				runBasic3();
-			}
-			
-
-			var runBasic3 = function (e) {							
-				time = new Date().getTime() - startTime;
-				value = time / 1000;
-				basic3.innerHTML = value;
-				basic3.style.left = 900 * value + "px";
-			    
-				if(value < 1) requestAnimationFrame(runBasic3);
-
-			}
-									
-			document.getElementById('start-basic3').addEventListener('click', startBasic3);
-		</script>
-
-	</section>	
-	<section>
-		<p>
-			<blockquote>"Using a term like nonlinear science is like referring to the bulk of zoology as the study of non-elephant animals."</blockquote>
-		</p>
-		- Stanislaw Ulam
-		
-	</section>	
-	<section>
-		<h2>Natural movement</h2>	
-		<p>Torque, drag, spin, friction</p>
-		
-	</section>
-	
-	<section>
-		<h2>Easing functions</h2>	
-		<img src="img/easeInCubic.png" class="fjs"/>
-		
-	</section>
-	
-	<section>
-		<h2>Easing</h2>	
-<pre>
-	valueAtTime = (end - start) * easingfunction([0-1]) + start		
-</pre>
-
-		<p>Change in property times (some float) plus beginning value.</p>
-		
-	</section>
-	<section>
-		<h2>Power Functions - EaseIn</h2>	
-		<img src="img/easeInCubic.png" class="fjs" style="width: 30%"/>
-	
-<pre>
+			<section data-state="ease-anim">
+				<h2>Power Functions - EaseIn</h2>	
+				<img src="img/easeInCubic.png" class="fjs" style="width: 30%"/>			
+				<pre>
 var run = function () {							
   time = new Date().getTime() - startTime;  
   div.style.left = 900 * <em>Math.pow(percentChange, 3)</em> + "px";
   if(time / duration < 1) requestAnimationFrame(run);
 }
-</pre>
-
-		<div id="ease" class="pills"></div>		
-		<span id="start-ease" style="color: gray;">></span>
-
-		<script>	
-			var time, startTime;		
-			var duration = 1000;	
-			var startX = 0; endX = 900;
-
-			var startEase = function () {
-				startTime = new Date().getTime();
-				runEase();
-			}
-			var ease = document.getElementById('ease');					
-
-			var runEase = function (e) {							
-				time = new Date().getTime() - startTime;
-				value = time / duration;
-				ease.style.left = startX + (endX - startX) * Math.pow(value, 5) + "px";
-			    
-				if(value < 1) requestAnimationFrame(runEase);
-
-			}
-									
-			document.getElementById('start-ease').addEventListener('click', startEase);
-		</script>
+				</pre>
+				<div class="basic-one-slide-background"><div id="ease-anim"></div></div>								
+				<aside class="notes">
+					Now we get to start playing around with our animations. We can make them more organic and we can tweak our values to produce exactly the effect we are after.
+					A great (and simple) starting point is the power function. 
+					You can put any power in there and see if it meets your needs.
+					So that is kinda sudden... and you don't always need to ferarri ... although who doesn't want the ferrari ...
+				</aside>					
+			</section>
 
 
-			
-		</section>	
-		<section>
-		<h2>Power Functions - EaseOut</h2>		
-		<img src="img/eastOutCubic.png" class="fjs" style="width: 30%"/>
-<pre>
-
+			<section data-state="ease-out-anim">
+				<h2>Power Functions - EaseOut</h2>		
+				<img src="img/eastOutCubic.png" class="fjs" style="width: 30%"/>
+				<pre>
 var run = function () {							
   time = new Date().getTime() - startTime;  
   div.style.left=(endX - startX)* <em>(1 - Math.pow(1 - (t / d), 3))</em> +startX+"px";
   if(time / duration < 1) requestAnimationFrame(run);
-}
-	
-</code></pre>
-
-		<div id="easeOut" class="pills"></div>		
-		<span id="start-easeOut" style="color: gray;">></span>
-
-		<script>	
-			var time, startTime;		
-			var duration = 1000;	
-			var startX = 0; endX = 900;
-
-			var startEaseOut = function () {
-				startTime = new Date().getTime();
-				runEaseOut();
-			}
-			var ease = document.getElementById('ease');					
-
-			var runEaseOut = function (e) {							
-				time = new Date().getTime() - startTime;
-				value = time / duration;
-				easeOut.style.left = startX + (endX - startX) * (1 - Math.pow(1 - value, 3)) + "px";
-			    
-				if(value < 1) requestAnimationFrame(runEaseOut);
-
-			}
-									
-			document.getElementById('start-easeOut').addEventListener('click', startEaseOut);
-		</script>
+}	
+				</pre>
+				<div class="basic-one-slide-background"><div id="ease-out-anim"></div></div>												
+				<aside class="notes">
+					We see this a little more used on the web. the slide in. This is back to the feeling that when a person walks into your periferral vision they already have velocity and then they slow down to a stop.
+				</aside>		
+			</section>
 
 
-		</section>	
-	<section>
-		<h2>Trig! ... sine :)</h2>	
-		<img src="img/easeInSine.png" class="fjs" style="width: 30%"/>	
-<pre>
+			<section data-state="ease-in-anim">
+				<h2>Trig! ... sine :)</h2>	
+				<img src="img/easeInSine.png" class="fjs" style="width: 30%"/>	
+				<pre>
 var run = function () {							
   time = new Date().getTime() - startTime;  
   div.style.left=(endX - startX)* <em>Math.sin( t/d * Math.PI / 2 )</em> +startX+"px";
   if(time / duration < 1) requestAnimationFrame(run);
 }
-</pre>
-
-		<div id="easeInSine" class="pills"></div>		
-		<span id="start-easeInSine" style="color: gray;">></span>
-
-		<script>	
-			var time, startTime;		
-			var duration = 1000;	
-			var startX = 0; endX = 900;
-
-			var startEaseInSine = function () {
-				startTime = new Date().getTime();
-				runEaseInSine();
-			}
-			var easeInSine = document.getElementById('easeInSine');					
-
-			var runEaseInSine = function (e) {							
-				time = new Date().getTime() - startTime;
-				value = time / duration;
-				easeInSine.style.left = startX + (endX - startX) * Math.sin( value * Math.PI / 2 ) + "px";
-			    
-				if(value < 1) requestAnimationFrame(runEaseInSine);
-
-			}
-									
-			document.getElementById('start-easeInSine').addEventListener('click', startEaseInSine);
-		</script>
+				</pre>
+				<div class="basic-one-slide-background"><div id="ease-in-anim"></div></div>															
+				<aside class="notes">
+					So what if you need a bit of nuance, it isn't a ferrari and it isn't the enter and exit stage left scenario? Trig and physics are incredibly powerful in representing natural and organic movement. 
+					It is subtle, but the devil is in the details
+				</aside>
+			</section>
 
 
-	</section>
-	<section>
-		<h2>Follow Through</h2>	
-		<p> > 1</p>		
-		
-	</section>
-	<section>
-		<h2>Elasticity</h2>	
-		<img src="img/easeOutBack.png" class="fjs" style="width: 30%"/>	
-<pre>
+			<section>
+				<h2>Follow Through</h2>	
+				<p> > 1</p>		
+				<aside class="notes">
+					<p>We can also go beyond that 0-1 range</p>
+					<p>One of the 12 Basic Principles of Animation is Follow through or elastic movement. </p>
+					<p>Follow through refers to an animation technique where things don't stop animating suddenly. They exceed their final target slightly before snapping back into place. This useful technique is something that can only be done by going beyond the 0-1 range.</p>
+				</aside>					
+			</section>
+
+
+			<section data-state="elastic-anim">
+				<h2>Elasticity</h2>	
+				<img src="img/easeOutBack.png" class="fjs" style="width: 30%"/>	
+				<pre>
 var run = function () {							
   time = new Date().getTime() - startTime;  
   div.style.left=(endX - startX)* <em>k * k * ( ( s + 1 ) * k - s )</em> +startX+"px";
   if(time / duration < 1) requestAnimationFrame(run);
 }
-</pre>
+				</pre>
+				<div class="basic-one-slide-background"><div id="elastic-anim"></div></div>																			
+				<aside class="notes">
+					The math is getting a little more complicated now ... but the basic underlying equation is still the same. you can pull most of the necessary functions from <strong>Robert Penner's easing functions</strong> or just check the source for tween.js. then you just plug and play and adjust values.
+				</aside>
+			</section>
 
-		<div id="elastic" class="pills"></div>		
-		<span id="start-elastic" style="color: gray;">></span>
-
-		<script>	
-			var time, startTime;		
-			var duration = 1000;	
-			var startX = 0; endX = 900;
-
-			var s, a = 0.1, p = 0.4;			
-
-			var startElastic = function () {
-				startTime = new Date().getTime();
-				runElastic();
-			}
-			var elastic = document.getElementById('elastic');					
-
-			var runElastic = function (e) {		
-	
-				time = new Date().getTime() - startTime;
-				k = time / duration;
-				
-				var s = 1.70158;			    
-			    elastic.style.left = startX + (endX - startX) * (--k * k * ( ( s + 1 ) * k + s ) + 1) + "px";			    
-				if(k < 0) requestAnimationFrame(runElastic);
-
-			}
-									
-			document.getElementById('start-elastic').addEventListener('click', startElastic);
-		</script>
-
-
-	</section>
-
-	<section>
-		<h2>Bounce</h2>	
-		<img src="img/easeOutBounce.png" class="fjs" style="width: 30%"/>	
-<pre>
+			<section data-state="bounce-anim">
+				<h2>Bounce</h2>	
+				<img src="img/easeOutBounce.png" class="fjs" style="width: 30%"/>						
+				<pre class="small-code">
 var easeFunc = function(k) {
 if ( k < ( 1 / 2.75 ) ) { 
 return 7.5625 * k * k;
@@ -499,177 +440,133 @@ return 7.5625 * ( k -= ( 1.5 / 2.75 ) ) * k + 0.75;
 } else if ( k < ( 2.5 / 2.75 ) ) {	
 return 7.5625 * ( k -= ( 2.25 / 2.75 ) ) * k + 0.9375;
 } else { 
-return 7.5625 * ( k -= ( 2.625 / 2.75 ) ) * k + 0.984375; }
-}
+return 7.5625 * ( k -= ( 2.625 / 2.75 ) ) * k + 0.984375; } }
 div.style.left=(endX - startX)* <em>easeFunc(t/d)</em> +startX+"px";
-</pre>
-
-		<div id="bounce" class="pills"></div>		
-		<span id="start-bounce" style="color: gray;">></span>
-
-		<script>	
-			var time, startTime;		
-			var duration = 1000;	
-			var startX = 0; endX = 900;
-
-			
-
-			var startBounce = function () {
-				startTime = new Date().getTime();
-				runBounce();
-			}
-			var bounce = document.getElementById('bounce');					
-
-			var easeFunc = function(k) {
-				if ( k < ( 1 / 2.75 ) ) {
-
-				return 7.5625 * k * k;
-
-				} else if ( k < ( 2 / 2.75 ) ) {
-
-					return 7.5625 * ( k -= ( 1.5 / 2.75 ) ) * k + 0.75;
-
-				} else if ( k < ( 2.5 / 2.75 ) ) {
-
-					return 7.5625 * ( k -= ( 2.25 / 2.75 ) ) * k + 0.9375;
-
-				} else {
-
-					return 7.5625 * ( k -= ( 2.625 / 2.75 ) ) * k + 0.984375;
-
-				}
-			}
-
-			var runBounce = function (e) {			
-				time = new Date().getTime() - startTime;
-				k = time / duration;								
-				bounce.style.left = startX + (endX - startX) * easeFunc(k) + "px";			    
-				if(k < 1) requestAnimationFrame(runBounce);
-			}
-									
-			document.getElementById('start-bounce').addEventListener('click', startBounce);
-		</script>
+				</pre>
+				<div class="basic-one-slide-background"><div id="bounce-anim"></div></div>																			
+				<aside class="notes">
+					Bounce is everywhere, it is playful and noticable without being obnoxious... like blinking
+				</aside>
+			</section>
 
 
-	</section>
-	<section>		
-		<iframe src="birds-on-a-wire.html" width="920" height="800" frameborder="0"></iframe>
-		<small><a href="birds-on-a-wire.html" target="_blank">Birds on a Wire</a></small>
-	</section>
-	<section>
-		<h2>Tools</h2>			
-					
-		
-	</section>		
-	<section>
-		<h2>Software</h2>	
-		<ul>
-			<li>Adobe Edge Animate</li>
-			<li>Adobe After Effects</li>
-			<li>Flinto</li>
-			<li>Keynote</li>
-			<li>Quartz</li>
-		</ul>	
-		
-	</section>
-	<section>
-		<h2>JS Frameworks</h2>	
-		<ul>
-			<li>Framer.js</li>
-			<li>Tween.js</li>
-			<li>GSAP (Greensock)</li>
-			<li>jQuery</li>			
-		</ul>	
-		
-	</section>
-	<section>
-		<h2>CSS</h2>	
-		<ul>
-			<li>Animate.css</li>
-			<li>SASS/LESS mixins</li>			
-		</ul>
-		
-	</section>
-	<section>
-		<h2>Performance</h2>			
-		
-	</section>		
-	<section>
-		<h2>Go forth and animate!</h2>
-		
-	</section>
-	<section>
-		<h2>References</h2>
-		<ul>
-			<li><a href="www.robertpenner.com/easing/">Robert Penner - Easing Functions</em></a></li>
-			<li><a href="http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107">Don Norman - The Design of Everyday Things</em></a></li>
-			<li><a href="http://www.google.com/design/spec/material-design/introduction.html">Google Material Design</em></a></li>
-			<li><a href="http://en.wikipedia.org/wiki/12_basic_principles_of_animation">Disney's Twelve Basic Principles of Animation</em></a></li>							
-			<li><a href="http://www.smashingmagazine.com/2012/10/30/motion-and-animation-a-new-mobile-ux-design-material/">Smashing Magazine - <em>A New Mobile UX Design Material</em></a></li>
-			<li><a href="http://carbonfive.github.io/html5-playground/birds-on-a-line.html">Birds on a Wire</em></a></li>				
-		</ul>
-	</section>
-	<section>
-		<img src="img/c5_16_9.png" class="fjs"/>
-		<small><a href="http://www.carbonfive.com">Courtney Hemphill</a> <br/> 
-			<a href="http://twitter.com/chemphill">@chemphill</a><br/>
-			<a href="mailto: courtney@carbonfive.com">courtney@carbonfive.com</a></small>
-	</section>
-	
+				<section>		
+					<iframe src="birds-on-a-wire.html" width="920" height="800" frameborder="0"></iframe>
+					<small><a href="birds-on-a-wire.html" target="_blank">Birds on a Wire</a></small>
+				</section>
+				<section>
+					<h2>Tools</h2>			
+					<aside class="notes">
+						So you can see that when animations start to get complicated, the math does start to get a bit more complicated as well. It is worthwhile to take the opportunity to play around with it but there are also lots of options out there to take care of it for you as well. Given the basic knowledge you have now, you can understand better what is going on under the hood.					
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Software</h2>	
+					<ul>
+						<li>Adobe Edge Animate</li>
+						<li>Adobe After Effects</li>
+						<li>Flinto</li>
+						<li>Keynote</li>
+						<li>Quartz</li>
+					</ul>	
+					<aside class="notes">
+						Total control, but still a handoff point to developers. 
+					</aside>								
+				</section>
+
+
+				<section>
+					<h2>JS Frameworks</h2>	
+					<ul>
+						<li>Framer.js</li>
+						<li>Tween.js</li>
+						<li>GSAP (Greensock)</li>
+						<li>jQuery</li>			
+					</ul>	
+					<aside class="notes">
+						Animating in JavaScript does give you a lot of control: starting, pausing, reversing, interrupting and cancelling are trivial. Some effects, like parallax scrolling, can only be achieved in JavaScript.				
+					</aside>								
+				</section>
+
+
+				<section>
+					<h2>CSS</h2>	
+					<ul>
+						<li>Animate.css</li>
+						<li>CSSanimate.com/<li>
+						<li>SASS/LESS mixins</li>			
+					</ul>
+					<aside class="notes">
+						CSS: browser can optimize the animation. pushed to GPU.
+						<p>position, scale, rotation and opacity</p>
+						great for simple animation on interface elements that don't have a lot of interdependency in their transitions
+					</aside>														
+				</section>	
+
+
+				<section>
+					<h2>Performance</h2>			
+					<aside class="notes">
+						<p>As far as performance, there is a lot to consider before you can just say CSS is better than JS. 
+						CSS gets touted as being more performant because it offloads calculations to a different thread and harnesses the GPU </p>
+						<p>JS translate3d or matrix3d.</p>
+						<p>specific to Transforms (scale, rotation, translation, and skew) and opacity</p>
+						<p>work is in the initial rendering and document layout, css layer won't have to redraw the full canvas. </p>
+					</aside>														
+				</section>		
+
+
+				<section>
+					<h2>Go forth and animate!</h2>
+					<aside class="notes">
+						So I'd like to encourage you all to go out and play with animations and with these formulas. See what you can do with just an HTML page and some simple JS functions. Play around with the values and find out what types of animations appeal to you.
+					</aside>					
+				</section>
+
+
+				<section>
+					<h2>References</h2>
+					<ul>
+						<li><a href="www.robertpenner.com/easing/">Robert Penner - Easing Functions</em></a></li>
+						<li><a href="http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107">Don Norman - The Design of Everyday Things</em></a></li>
+						<li><a href="http://www.google.com/design/spec/material-design/introduction.html">Google Material Design</em></a></li>
+						<li><a href="http://en.wikipedia.org/wiki/12_basic_principles_of_animation">Disney's Twelve Basic Principles of Animation</em></a></li>							
+						<li><a href="http://www.smashingmagazine.com/2012/10/30/motion-and-animation-a-new-mobile-ux-design-material/">Smashing Magazine - <em>A New Mobile UX Design Material</em></a></li>
+						<li><a href="http://carbonfive.github.io/html5-playground/birds-on-a-line.html">Birds on a Wire</em></a></li>				
+					</ul>
+				</section>
+
+
+				<section>
+					<img src="img/c5_16_9.png" class="fjs"/>
+					<small><a href="http://www.carbonfive.com">Courtney Hemphill</a> <br/> 
+						<a href="http://twitter.com/chemphill">@chemphill</a><br/>
+						<a href="mailto: courtney@carbonfive.com">courtney@carbonfive.com</a></small>
+				</section>
+						
 			</div>
-
+			<div id="d-v-d-container">
+				<div id="design-versus" class="d-v-d"></div>
+				<div id="d-v-d-slider"><div id="dev-versus" class="d-v-d">asdfasdf</div></div>
+			</div>
 		</div>
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
-			
-
-	
-
+		<script src="js/customEvents.js"></script>	
 		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
-				progress: true,
+				controls: false,
+				progress: false,
 				history: true,
 				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'default', 
 				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-
-						
-		
-			Reveal.addEventListener( 'summary', function( event ) {	
-			console.log('here');					    
-			    var sum = document.getElementById('summaryMenu');
-			    var lis = sum.getElementsByTagName('li');
-			    lis[0].className = 'animated bounceInDown';
-			    lis[1].className = 'animated bounceInUp';
-			    lis[2].className = 'animated bounceInDown';
-			    lis[3].className = 'animated bounceInUp';
-			} );
-		
-
+				dependencies: [ { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } } ]
+			});		
+			Reveal.configure({ keyboard: { 32: checkForSpace } });	
 		</script>
-
 	</body>
 </html>

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400);
 
 @-webkit-keyframes hue {
   from {
@@ -10,14 +11,21 @@
   }
 }
 
-body .reveal {
-font-family: 'RobotoDraft',sans-serif;
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+font-family: 'Roboto', sans-serif;
 -webkit-font-smoothing: antialiased;
 }
 
 .reveal a, .reveal a:not(.image) {
 	color: #333;
 }
+
+.reveal h2 { font-size: 2em;}
 
 .reveal ul#summaryMenu li {
 	display: block;
@@ -47,7 +55,21 @@ font-family: 'RobotoDraft',sans-serif;
 .reveal ul#summaryMenu li:nth-of-type(3) { background-color: #738ffe; }
 .reveal ul#summaryMenu li:nth-of-type(4) { background-color: #29b6f6; }
 
-.reveal section img.fjs {
+.reveal section div.c5-contact {
+	width: 960px;
+	position: relative;
+	z-index: 20;
+	top: 2em;
+}
+.reveal .c5-contact small {
+	float: right;
+	position: relative;
+	top: 4em;
+	text-align: right;	
+}
+.reveal .c5-contact small a { display: block; }
+
+.reveal section img#c5-logo {
 	border: 0;
 	background: none;	
 	box-shadow: none;
@@ -56,6 +78,10 @@ font-family: 'RobotoDraft',sans-serif;
 	-ms-transition: none;
 	-o-transition: none;
 	transition: none; 
+	height: 2em;	
+	position: relative;
+	top: 2em;
+	float: left;	
 }
 
 .reveal section div.attribution {
@@ -69,6 +95,15 @@ font-family: 'RobotoDraft',sans-serif;
 .reveal h1 {
 	line-height: 1.2em;
 }
+
+.reveal section.intro h1,.reveal section.intro h3 {
+	position: relative;
+	z-index: 3;
+	color: #212121;
+	font-weight:100;
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.55); 
+}
+.reveal section.intro h3 { font-weight: normal; }
 
 .reveal h2 .big {
 	font-size: 320px;
@@ -85,7 +120,8 @@ font-family: 'RobotoDraft',sans-serif;
     -webkit-text-fill-color: transparent;
     -webkit-animation: hue 12s infinite linear;
 	-webkit-animation: hue 12s infinite linear;	
-	height: 320px;
+	height: 210px;
+	text-indent: 0.3em;
 }
 
 .reveal pre {
@@ -95,19 +131,15 @@ font-family: 'RobotoDraft',sans-serif;
 
 .reveal pre {
 	box-shadow: 0 0 0 rgba(0, 0, 0, 0.55); 
-	border-bottom: 1px solid #bbb;
 }
 .reveal pre em {
-	background-color: #83C1E5;
+	background-color: rgba(16,63,236,0.75);
+	color: #fff;	
 }
 
 .reveal ul li {
 	list-style-type: none;
 	line-height: 2em;
-}
-
-.reveal #basic-one, .reveal .pills {
-	background-color: #83C1E5; width: 120px; height: 30px; border-radius: 30px; position: relative; top: 0px; color: white; font-size: 0.5em; line-height: 1.5em;
 }
 
 #sidenav-demo {
@@ -150,3 +182,71 @@ font-family: 'RobotoDraft',sans-serif;
   color: #dd2c00;
 }
 
+/*.reveal .progress { display: none !important; }*/
+.reveal blockquote { box-shadow: none;}
+
+.reveal section img.fjs {
+	border: 0;
+	background: none;	
+	box-shadow: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none; 
+}
+.reveal pre { border-bottom: none;}
+.reveal pre.small-code { font-size: 0.4em;}
+.reveal #basic-one, .reveal #basic-two, .reveal #basic-three, .reveal #ease-anim, .reveal #ease-out-anim, .reveal #ease-in-anim, .reveal #elastic-anim, .reveal #bounce-anim {
+	background-color: #83C1E5; width: 120px; height: 30px; border-radius: 30px; position: relative; top: 0px; color: white; font-size: 0.5em; line-height: 1.5em;
+}
+.reveal #basic-one, .reveal #basic-two, .reveal #basic-three, .reveal #ease-anim, .reveal #ease-out-anim, .reveal #ease-in-anim, .reveal #elastic-anim, .reveal #bounce-anim  {height: 7em; width: 7em; border-radius: 7em; top: 0.5em; left: 0.5em; background: rgba(16,63,236,0.75);}
+.reveal .basic-one-slide-background {border-top: 0.2em solid #333; border-bottom: 0.2em solid #333; border-radius: 1em; width: 960px; height: 4em; }
+
+.d-v-d {width: 100%; height: 100%; }
+#d-v-d-container {width: 100%; height: 100%; display: none;}
+#d-v-d-slider {
+	/* set initial width */
+		   width: 60%;
+		   height: 100%;
+		   /* hide the content that overflows (to allow second box to show through) */
+		   overflow: hidden;
+		   display: inline-block;
+		   
+		   /* skew container so that it has angled edge, and set up transition */
+		  -webkit-transform: skewX(-20deg);
+		  -moz-transform: skewX(-20deg);
+		  -ms-transform: skewX(-20deg);
+		  -o-transform: skewX(-20deg);
+		  transform: skewX(-20deg);
+		  
+		  -webkit-transition: width 1.2s ease-in-out;
+		  -moz-transition: width 1.2s ease-in-out;
+		  -ms-transition: width 1.2s ease-in-out;
+		  -o-transition: width 1.2s ease-in-out;
+		  transition: width 1.2s ease-in-out;
+		  
+		   /* give negative margin to remove gap caused by left hand skew */
+		   margin-left: -8%;
+		   border-right: 10px solid ghostwhite;
+		   
+		   /* hide pointer events for unseen content */
+		   pointer-events: none;
+}
+
+#dev-versus {
+/* skew back by negative of parent’s skew so contents is upright */
+		  -webkit-transform: skewX(20deg);
+		  -moz-transform: skewX(20deg);
+		  -ms-transform: skewX(20deg);
+		  -o-transform: skewX(20deg);
+		  transform: skewX(20deg);
+		  
+		  background: url(../img/code3.jpg) no-repeat;
+		  margin-left: 76px; /* give margin to push content away from left slanted edge */
+		  pointer-events: auto;	/* allow pointer events for the box */
+}
+
+#design-versus {
+	background: url('../img/design2.jpg') no-repeat 100% 10%; position:absolute;
+}
