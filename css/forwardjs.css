@@ -242,7 +242,7 @@ font-family: 'Roboto', sans-serif;
 		  -o-transform: skewX(20deg);
 		  transform: skewX(20deg);
 		  
-		  background: url(../img/code3.jpg) no-repeat;
+		  background: url(../img/code3.jpg) no-repeat 0 68px;
 		  margin-left: 76px; /* give margin to push content away from left slanted edge */
 		  pointer-events: auto;	/* allow pointer events for the box */
 }

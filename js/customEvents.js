@@ -161,7 +161,7 @@ function summary(e) {
 	circle.className = 'circle large bullet-'+i;
 	if (i > 1) { 
 		last = document.getElementById('bullet-'+(i-1)); 		
-  	setTimeout(function(){ last.childNodes[0].className = 'fadeOut'; }, 2000);
+  	setTimeout(function(){ last.childNodes[0].className = 'fadeOut'; }, 20);
   }
 	i++;
 }

@@ -61,7 +61,17 @@ animation:spin 10s linear infinite;
   100% { opacity: 0.85; -webkit-transform:rotateZ(90deg); transform:rotateZ(90deg); }
 }
 
-.summarySlide .circle span.fadeOut {opacity: 0.10;}
+.summarySlide .circle span.fadeOut {
+	/*opacity: 0.10;*/
+	-webkit-opacity: 0.1;
+  -moz-opacity: 0.1;
+  opacity: 0.1;
+	-webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -ms-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;
+  }
 
 .summarySlide span {font-family: 'Roboto', sans-serif; font-weight: 300; text-align: center; display: block; height: 1em; width: 7em; position: relative;}
 .summarySlide .bullet-1 span {-webkit-transform:rotateZ(-225deg);transform:rotateZ(-225deg); left: 0; top: 205px; }
