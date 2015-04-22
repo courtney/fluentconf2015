@@ -60,6 +60,11 @@
 							<a href="http://twitter.com/chemphill">@chemphill</a>
 							#fluentconf
 						</small>
+						<aside class="notes">
+							simple math that can help elevate your interfaces<br/>
+							designers can play in code and developers can learn to design<br/>
+							<i>Wireframes and static comps leave us stuck in extreme states: "When the user taps on the menu icon, the panel will slide down from the top of the page. When the user clicks the thumbnail, the video will enlarge full screen. And then it hit me."</i>
+						</aside>
 					</div>		
 					<span class="spin">
 						<div class="large circle one"></div>
@@ -79,7 +84,10 @@
 					<div class="circle large three" id="bullet-3"><span>Formulas as Foundations</span></div>					
 					<div class="circle large four" id="bullet-4"><span>Frameworks</span></div>	
 					<aside class="notes">
-						We're going to get a little context first about motion and design and why it matters and then get into the nitty gritty details. Finally I'll try to talk a bit about the tools and their use in creating animation. 
+						cognative abilities and what humans are natural at<br/>
+						how to use animation in UI<br/>
+						math<br/>
+						Some tools and frameworks you can use<br/>
 					</aside>								
 				</section>
 
@@ -98,22 +106,13 @@
 					</aside>			
 				</section>
 
-				<section data-state="gertie">	
-					<h2>Movement creates life</h2>		
-					<video width="960" height="540" controls="controls">
-						<source src="img/gertie.mp4" type="video/mp4">
-					</video>			
-					<!-- <a href="http://www.youtube.com/embed/UY40DHs9vc4?start=35&end=55" target="_blank"><img src="img/Gertie.jpg" class="fjs"/></a> -->
-					<div class="attribution">Gertie the Dinosaur (Winsor McCay, 1914)<br/>https://www.youtube.com/watch?v=UY40DHs9vc4</div>				
-					<aside class="notes">
-						Animations are fun. Take a simple static image with very little personality...
-						Windsor McCay
-					</aside>
-				</section>	
-
-				<section>
+				<section data-state="keyframe">
 					<img src="img/tweening.gif" class="fjs"/>					
 					<aside class="notes">
+						<p>Early in Disney's history, they had a bunch of "old men", really young at the time that were looking to explore a new art form</p>
+
+						<p>Disney's desire to devise a way of animating that seemed more 'real' in terms of how things moved, and how that movement might be used to express character and personality.</p>
+
 						<p>Windsor McCay working at disney, came up with a way to create cartoon animations</p>
 
 						<p>Traditional disney animation consisted of the best designers creating a few key animation drawings and then a "inbetweener" would draw in the scenes between. This is where keyframe and tween came to be. </p>
@@ -122,7 +121,23 @@
 						
 						<p>So instead of a human determining tbe direction and speed that this figure flips, we've can use math to actually create very organic and natural animations from one state to the next.</p>
 					</aside>	
-				</section>					
+				</section>	
+
+
+				<section data-state="gertie">	
+					<h2>Movement creates life</h2>		
+					<video width="960" height="540" controls="controls">
+						<source src="img/gertie.mp4" type="video/mp4">
+					</video>			
+					<!-- <a href="http://www.youtube.com/embed/UY40DHs9vc4?start=35&end=55" target="_blank"><img src="img/Gertie.jpg" class="fjs"/></a> -->
+					<div class="attribution">Gertie the Dinosaur (Winsor McCay, 1914)<br/>https://www.youtube.com/watch?v=UY40DHs9vc4</div>				
+					<aside class="notes">
+						<p>Take a simple static image with very little personality...</p>
+							<p> irony is that movies at the time had much jankier movements than cartoons. Tweening could make Gertie actually feel more real	than chaplan</p>
+					</aside>
+				</section>	
+
+								
 
 				<section data-background="img/brain.jpg">
 					<h2 style="color: #fff; text-shadow: 2px 3px 3px #666;">Animations are cognitive aids</h2>														
@@ -149,25 +164,33 @@
 						<p>What does it mean to "feel" right?</p>
 						<p>It is very much based in reality and in our interaction with normal object in our daily lives</p>
 						<p>Don Noman in "The design of everyday things" talks about affordance</p>
-						<p>At a very simple level, to afford means "to give a clue"</p>
+						<p>At a very simple level, an affordance describes the relationship of a person to an object</P> 
+						<p>A signifier is a signal that indicates how an object can be used</p>
 						<p>Things have understood physical properties which we can intuit to mean certain things. this is affordance.</p>
 						<p>In much the same way, user interfaces can naturally lead people to take the correct steps to accomplish their goals.. this is a signifier or perceived affordance: The concept of affordance derives from cognitive psychology and refers to particular characteristics of an object that guide the viewer.
 						</p>					
-						<p>"a desirable property of a user interface — software which naturally leads people to take the correct steps to accomplish their goals."</p>																		
+						<p>"a desirable property of a user interface — software which naturally leads people to take the correct steps to accomplish their goals."</p>	
+						<p>In the world of design, what matters is:
+
+        1. If the desired controls can be perceived</br>
+                A: In an easy to use design, if they can both readily be perceived and interpreted</br>
+        2. If the desired actions can be discovered</br>
+                B: In an easy to use design, whether standard conventions are obeyed</br>
+</p>																	
 					</aside>					
 				</section>				
 
-				<section data-background="img/ferrari.jpg">
+				<section data-state="ferrari" data-background="img/ferrari.jpg">
 					<h2 style="color: #ddd;">Motion detection</h2>																		
 					<aside class="notes">
 						Humans have crap perception of color in their peripheral vision but are great at sensing movement. 
 						Animated transitions between screens convey logical relationships and create an understood "map" of an interface from how things enter and exit a screen.											
 					</aside>			
 				</section>
-				<section>
-					<iframe src="grid-demo.html" width="1020" height="600" frameborder="0"></iframe>
+				<section data-state="grid-demo" class="grid-demo">
+					<h2>Auto Loading</h2>
 				</section>					
-				<section>						
+				<section data-state="buttons">						
 					<div class="buttons">						
 						<div id="color-btn-demo" class="animated">Right</div>
 						<div id="motion-btn-demo">Right</div>
@@ -176,6 +199,11 @@
 						document.getElementById('motion-btn-demo').addEventListener('click', function(){this.className = 'animated shake'; this.innerHTML = 'Wrong';});;
 						document.getElementById('color-btn-demo').addEventListener('click', function(){this.className = 'wrong'; this.innerHTML = 'Wrong';});;
 					</script>
+					<aside class="notes">
+						<p>playfulness</p>
+						<p>feedback</p>				
+						<p>It’s nice to feel like things are reacting to what you’re doing. 					</p>
+					</aside>
 				</section>							
 				
 				<section>
@@ -199,6 +227,11 @@
 				<section>
 					<img src="img/progressive_disclosure.gif" class="fjs"/>
 					<div class="attribution">Colin Garven <br/> https://dribbble.com/ColinGarven</div>
+					<aside class="notes">
+						<p>guidance</p>
+						<p>nudging - feedforward</p>
+						<p>continuity & pace</p>									
+					</aside>
 				</section>								
 			
 				<section>
@@ -404,6 +437,9 @@ var run = function () {
 				<aside class="notes">
 					So what if you need a bit of nuance, it isn't a ferrari and it isn't the enter and exit stage left scenario? Trig and physics are incredibly powerful in representing natural and organic movement. 
 					It is subtle, but the devil is in the details
+					<p>
+						Introducing time and motion changed everything for me, because what I realized was that it gave you precise control over the emotion you are trying to convey and how an audience will interpret your message. I’d often look to title sequences for inspiration because I was fascinated with how a 30 second or 3 minute sequence had the ability to set the tone for an entire film and foreshadow what was going to happen. 
+					</p>
 				</aside>
 			</section>
 
@@ -505,6 +541,7 @@ div.style.left=(endX - startX)* <em>easeFunc(t/d)</em> +startX+"px";
 						<li>CSSanimate.com/<li>
 						<li>SASS/LESS mixins</li>			
 					</ul>
+					<img src="img/chrome-inspect.png"/>
 					<aside class="notes">
 						CSS: browser can optimize the animation. pushed to GPU.
 						<p>position, scale, rotation and opacity</p>
@@ -558,6 +595,7 @@ div.style.left=(endX - startX)* <em>easeFunc(t/d)</em> +startX+"px";
 				<div id="design-versus" class="d-v-d"></div>
 				<div id="d-v-d-slider"><div id="dev-versus" class="d-v-d">asdfasdf</div></div>
 			</div>
+			<div id="show-grid-demo"><iframe src="grid-demo.html" width="100%" height="600" frameborder="0"></iframe></div>
 		</div>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>

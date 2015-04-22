@@ -166,10 +166,18 @@ function summary(e) {
 	i++;
 }
 
-function gertie(e) {
+function keyframe(e) {
 	document.getElementById('d-v-d-container').style.display = 'none';
 }
 
+
+function gridDemo(e) {
+	document.getElementById('show-grid-demo').style.display = 'block';
+}
+
+function closeGrid(e) {
+	document.getElementById('show-grid-demo').style.display = 'none';
+}
 
 Reveal.addEventListener( 'slidechanged', function( event ) {
 	console.log(event.currentSlide.dataset.state)
@@ -178,7 +186,10 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 			// case 'logoSlide': document.getElementById('logoAnimate').className = 'fjs logoAnimation'; break;
 			case 'summary': summary(event); break;
 			case 'design-dev': designDev(event); break;
-			case 'gertie': gertie(event); break;
+			case 'grid-demo': gridDemo(event); break;
+			case 'ferrari': closeGrid(event); break;
+			case 'buttons': closeGrid(event); break;
+			case 'keyframe': keyframe(event); break;
 			default: return false;			
 		}				
 	}

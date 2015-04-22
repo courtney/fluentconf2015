@@ -27,6 +27,11 @@ font-family: 'Roboto', sans-serif;
 
 .reveal h2 { font-size: 2em;}
 
+.reveal .grid-demo h2 {
+	width: 5em;
+	margin: auto;
+}
+
 .reveal ul#summaryMenu li {
 	display: block;
 	float: left;
@@ -249,4 +254,10 @@ font-family: 'Roboto', sans-serif;
 
 #design-versus {
 	background: url('../img/design2.jpg') no-repeat 100% 10%; position:absolute;
+}
+#show-grid-demo {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	display: none;	
 }
